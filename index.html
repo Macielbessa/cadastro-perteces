@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>[METROFOR] Achados e perdidos</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="shortcut icon" href="favicon.ico">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h2 class="titulo">Sala de achados e perdidos</h2>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Pertences disponiveis</h2>
+
+				<label for="filtrar-tabela">Filtro:</label>
+				<input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o nome do pertence">
+				<table>
+					<thead>
+						<tr>
+							<th>Nome do pertence</th>
+							<th>Linha do metrô</th>
+							<th>Horário</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pertences">
+						<tr class="pertence" id="primeiro-pertence">
+							<td class="info-nome">Oculos preto</td>
+							<td class="info-linhas">VLT Parangaba</td>
+							<td class="info-horario">09:20</td>
+						</tr>
+
+						<tr class="pertence" >
+							<td class="info-nome">Mochila de couro</td>
+							<td class="info-linhas">Linha sul</td>
+							<td class="info-horario">14:45</td>
+						</tr>
+
+						<tr class="pertence">
+							<td class="info-nome">Jbl</td>
+							<td class="info-linhas">Linha Oeste</td>
+							<td class="info-horario">10:50</td>
+						</tr>
+
+						<tr class="pertence">
+							<td class="info-nome">Boné</td>
+							<td class="info-linhas">Linha mucuripe</td>
+							<td class="info-horario">16:00</td>
+						</tr>
+						<tr class="pertence" >
+							<td class="info-nome">Livros</td>
+							<td class="info-linhas">Linha Sobral</td>
+							<td class="info-horario">7:00</td>
+						</tr>
+					</tbody>
+				</table>
+				<span id="erro-ajax" class="invisivel">Erro ao buscar os Pertences</span>
+		        <button id="buscar-pertences" class="botao bto-principal">Buscar pertence</button>		
+
+			</section>
+		</main>
+
+		<section class="container">
+		    <h2 id="titulo-form">Adicionar novo pertence encontrado</h2>
+			<ul id="mensagens-erro"></ul>
+		    <form id="form-adiciona">
+		        <div class="">
+		            <label for="nome">Nome do pertence:</label>
+		            <input id="nome" name="nome" type="text" placeholder="digite o nome do pertence" class="campo">
+		        </div>
+		        <div class="grupo">
+		            <label for="linhas">Linhas do Metrô:</label>
+		            <input id="linhas" name="linhas" type="text" placeholder="digite a linha " class="campo campo-medio">
+		        </div>
+		        <div class="grupo">
+		            <label for="horario">Horário:</label>
+		            <input id="horario" name="horario" type="text" placeholder="digite o Horário " class="campo campo-medio">
+		        </div>
+		        <button id="adicionar-pertences" class="botao bto-principal">Adicionar</button>
+		    </form>
+		</section>
+
+		
+		<script src="js/form.js" ></script>
+		<script src="js/remover-paciente.js" ></script>
+		<script src="js/filtra.js" ></script>
+		<script src="js/buscar-pacientes.js" ></script>
+
+
+
+	</body>
+</html>
